@@ -20,11 +20,11 @@ function Header() {
   return (
     <div
       className={`flex justify-between items-center duration-500 w-full bg-white
-         pt-6 pb-2 ${
-           isSticky
-             ? "fixed top-0 left-0 px-8 md:px-12 lg:px-16 xl:px-40 shadow-xl z-50 py-6"
-             : ""
-         }`}
+          ${
+            isSticky
+              ? "fixed top-0 left-0 px-8 md:px-12 lg:px-16 xl:px-40 shadow-xl z-50 py-3"
+              : "pt-6 pb-2"
+          }`}
     >
       <Logo isSticky={isSticky} />
       <NavMenu />
