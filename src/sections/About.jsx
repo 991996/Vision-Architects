@@ -2,6 +2,7 @@ import about1 from "@/assets/about/Rectangle 8.png";
 import about2 from "@/assets/about/Rectangle 9.png";
 import about3 from "@/assets/about/Rectangle 10.png";
 import { CgArrowLongRight } from "react-icons/cg";
+import MyButton from "@/components/MyButton";
 
 export default function About() {
   return (
@@ -33,10 +34,7 @@ export default function About() {
           quisquam itaque ab voluptates repudiandae ad pariatur placeat?
           Aspernatur aut nostrum impedit blanditiis.
         </p>
-        <button className="flex items-center gap-3 p-6 self-start bg-white cursor-pointer">
-          <p className=" uppercase tracking-widest">Read More</p>
-          <CgArrowLongRight />
-        </button>
+        <MyButton text="Read More" />
       </div>
     </div>
   );

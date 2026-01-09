@@ -1,7 +1,10 @@
 import "./App.css";
 import About from "./sections/About";
+import Contact from "./sections/Contact";
 import Header from "./sections/header/Header";
 import Main from "./sections/Main";
+import Numbers from "./sections/Numbers";
+import Projects from "./sections/Projects";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
         <div className="flex flex-col gap-20 md:gap-30 lg:gap-40">
           <Main />
           <About />
+          <Numbers />
+          <Projects />
+          <Contact />
         </div>
       </div>
     </div>

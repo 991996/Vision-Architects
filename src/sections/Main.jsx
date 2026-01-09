@@ -1,5 +1,6 @@
 import { CgArrowLongLeft, CgArrowLongRight } from "react-icons/cg";
 import main1 from "@/assets/main1.png";
+import MyButton from "@/components/MyButton";
 
 export default function Main() {
   return (
@@ -43,9 +44,8 @@ export default function Main() {
           alt="project image"
           className="w-full h-full object-cover"
         />
-        <div className="flex items-center gap-3 p-6 absolute bottom-0 left-0 bg-white">
-          <p className=" uppercase tracking-widest">View Project</p>
-          <CgArrowLongRight />
+        <div className="absolute bottom-0 left-0">
+          <MyButton text="View Project" />
         </div>
       </div>
     </div>
