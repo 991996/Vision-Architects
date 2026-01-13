@@ -1,7 +1,6 @@
 import about1 from "@/assets/about/Rectangle 8.png";
 import about2 from "@/assets/about/Rectangle 9.png";
 import about3 from "@/assets/about/Rectangle 10.png";
-import { CgArrowLongRight } from "react-icons/cg";
 import MyButton from "@/components/MyButton";
 
 export default function About() {

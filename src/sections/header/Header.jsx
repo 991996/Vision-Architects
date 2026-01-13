@@ -22,11 +22,11 @@ function Header() {
       className={`flex justify-between items-center duration-500 w-full bg-white
           ${
             isSticky
-              ? "fixed top-0 left-0 px-8 md:px-12 lg:px-16 xl:px-40 shadow-xl z-50 py-3"
+              ? "fixed top-0 left-0 px-8 md:px-12 lg:px-16 xl:px-40 shadow-xl z-2000 py-3"
               : "pt-6 pb-2"
           }`}
     >
-      <Logo isSticky={isSticky} />
+      <Logo className={isSticky ? "w-15" : "w-20"} />
       <NavMenu />
       <div className="flex gap-4">
         <MobileMenu />

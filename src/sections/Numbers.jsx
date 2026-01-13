@@ -1,4 +1,11 @@
+import { useRef } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
+
 export default function Numbers() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const itemsList = [
     {
       number: 1,
@@ -17,14 +24,18 @@ export default function Numbers() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         {itemsList.map((item, index) => {
           return (
-            <div
+            <motion.div
+              ref={ref}
+              animate={isInView ? { scale: 1, opacity: 1 } : {}}
+              initial={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeIn", delay: index / 2 }}
               key={index}
               className={
                 index === 0 ? "justify-self-start" : "md:justify-self-end"
               }
             >
               <Item item={item} />
-            </div>
+            </motion.div>
           );
         })}
       </div>

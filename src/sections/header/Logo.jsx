@@ -1,12 +1,18 @@
 import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo-white.png";
+import { Link } from "react-router-dom";
 
-function Logo({ isSticky = false }) {
+function Logo({ className = "w-20", color = "black" }) {
   return (
-    <a href="#home">
-      <div className={isSticky ? "w-15" : "w-25 md:w-20"}>
-        <img src={logo} alt="logo" className="w-full h-full object-contain" />
+    <Link to="/">
+      <div className={className}>
+        <img
+          src={color === "black" ? logo : logoWhite}
+          alt="logo"
+          className="w-full h-full object-contain"
+        />
       </div>
-    </a>
+    </Link>
   );
 }
 
