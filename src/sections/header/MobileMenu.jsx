@@ -10,6 +10,7 @@ import Logo from "./Logo";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { contactInfo, navMenu } from "@/data/Data";
+import { Link } from "react-router-dom";
 
 const contactList = [
   {
@@ -43,13 +44,13 @@ function MobileMenu() {
               {navMenu.map((nav, index) => {
                 return (
                   <>
-                    <a
+                    <Link
+                      to={nav.href}
                       key={index}
                       className="text-[17px] font-medium cursor-pointer"
-                      href={nav.href}
                     >
                       {nav.title}
-                    </a>
+                    </Link>
                     {index !== navMenu.length - 1 ? <hr /> : <></>}
                   </>
                 );

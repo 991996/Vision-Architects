@@ -1,6 +1,7 @@
 import { contactInfo, navMenu, socialMedia } from "@/data/Data";
 import Logo from "./header/Logo";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -17,13 +18,13 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             {navMenu.map((info, index) => {
               return (
-                <a
+                <Link
+                  to={info.href}
                   key={index}
-                  href={info.href}
                   className=" capitalize hover:underline duration-300"
                 >
                   {info.title}
-                </a>
+                </Link>
               );
             })}
           </div>
